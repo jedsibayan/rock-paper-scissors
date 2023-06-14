@@ -31,7 +31,12 @@ function play (playerSelection, computerSelection) {
     }
 }
 
-let playerSelection = 'rock'
-let computerSelection = getComputerChoice()
-console.log(play(playerSelection, computerSelection))
+function game() {
+    for (i = 0; i < 5; i++) {
+    let playerSelection = 'rock'
+    let computerSelection = getComputerChoice()
+    console.log(play(playerSelection, computerSelection))
+}
+}
 
+game()
