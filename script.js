@@ -19,14 +19,5 @@ function checkWinner (playerSelection, computerSelection) {
     }
 }
 
-function play (playerSelection, computerSelection) {
-    let result = checkWinner(playerSelection, computerSelection)
-    if (result === tie) {
-        return "It's a tie!"
-    } else if (result === player) {
-        return `Player wins ${playerSelection} beats ${computerSelection}`
-    } else {
-        return `Computer wins!  `
-    }
-}
+
 
