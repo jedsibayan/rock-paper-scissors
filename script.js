@@ -2,6 +2,7 @@ const options = ['rock', 'paper', 'scissors']
 
 function getComputerChoice() {
   let randomIndex =  Math.floor(Math.random() * options.length)
+  console.log()
   return options[randomIndex]
 }
 
@@ -21,12 +22,16 @@ function checkWinner (playerSelection, computerSelection) {
 
 function play (playerSelection, computerSelection) {
     let result = checkWinner(playerSelection, computerSelection)
-    if (result === tie) {
+    if (result === 'tie') {
         return "It's a tie!"
-    } else if (result === player) {
+    } else if (result === 'player') {
         return `Player wins ${playerSelection} beats ${computerSelection}`
     } else {
-        return `Computer wins!  `
+        return `Computer wins! ${computerSelection} beats ${playerSelection} `
     }
 }
+
+let playerSelection = 'rock'
+let computerSelection = getComputerChoice()
+console.log(play(playerSelection, computerSelection))
 
