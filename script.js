@@ -21,6 +21,8 @@ function checkWinner (playerSelection, computerSelection) {
 }
 
 function play (playerSelection, computerSelection) {
+    let playerSelection = prompt('Enter your choice: rock, paper, or scissors')
+    playerSelection = playerSelection.toLowerCase()
     let result = checkWinner(playerSelection, computerSelection)
     if (result === 'tie') {
         return "It's a tie!"
